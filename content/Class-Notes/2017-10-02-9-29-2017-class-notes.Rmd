@@ -1,0 +1,54 @@
+---
+title: 9.29.2017 Class Notes
+author: Steven Koski
+date: '2017-10-02'
+slug: 9-29-2017-class-notes
+categories:
+  - R
+tags:
+  - R Markdown
+
+---
+```{r}
+library(Lahman)
+library(sqldf)
+library(ggplot2)
+```
+
+```{r}
+print("This next code is an example of a scatterplot we learned in class. It gathers all the data and plots thm as dots on a graph to make it easier to visualize the data. We also draw lines between each of the data points to make it easier to visualize how the points are ordered.")
+#This is a scatterplot that has two columns of numerical data and one 
+#represents time wile the other reperesents different points of data
+query<-"SELECT yearID,HR
+FROM Batting 
+WHERE playerID='ruthba01'"
+
+result<-sqldf(query)
+
+ggplot()+
+  geom_point(data=result,aes(x=yearID,y=HR))+
+  geom_line(data=result,aes(x=yearID,y=HR))+
+  ggtitle("Home Runs Per Year for Babe Ruth")+
+  xlab("Year")+
+  ylab("Home Runs")
+```
+#Hair color is an atrribute with different levels for each of the hair colors.
+#All of these are called factors in this termonology. Color of our eyes, or hair are these factors
+standing<-c("junior","freshmen","junior","Sophmore","Senior")
+# class(standing) Allows you to check what variable is made up of... in this case characters
+#Store the standing back into itself as this new factor version
+standing<-factor(standing,levels=c("freshmen","sophmores","junior","senior"))
+#You must order the table how YOU want it to be done^
+```{r}
+query<-"SELECT weight 
+FROM Master"
+#Good example of storing all the data into a variable that you
+#Can use elsewhere in your code
+result<-sqldf(query)
+#Issue with all clors default making it this bright pink
+ggplot()+
+  geom_histogram(data=result,aes(x=weight),color="blue",fill="white",bins=50)+
+  ggtitle("Body-Weight of the fat baseball players")
+
+```
+
