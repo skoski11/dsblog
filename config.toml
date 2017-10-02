@@ -19,7 +19,7 @@ theme = "hugo-minimalist-theme"
     # Link custom assets relative to /static
     avatar = "img/profile-image.png"
     header_background = "img/desk.jpg"
-    header_title = "Customizable header title"
+    header_title = "Steven Koski's Blog"
     copyright = "Powered by [Hugo](http://gohugo.io)."
     custom_css = []
     custom_js  = []
@@ -31,11 +31,6 @@ theme = "hugo-minimalist-theme"
     # Add your social network accounts to the profile section on the left
     # by entering your username. The links to your account will be
     # create automatically.
-    twitter   = "spf13"
-    facebook  = ""
     linkedin  = ""
-    behance   = ""
-    dribbble  = ""
-    instagram = ""
-    github    = "digitalcraftsman"
+    github    = "https://github.com/skoski11"
     gplus     = ""
