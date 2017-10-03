@@ -1,0 +1,20 @@
+---
+title: A Brief Introduction to Bar Plots
+author: Steven Koski
+date: '2017-10-03'
+slug: a-brief-introduction-to-bar-plots
+categories:
+  - R
+tags:
+  - R Markdown
+---
+
+
+
+<pre class="r"><code>#Hair color is an atrribute with different levels for each of the hair colors.
+#All of these are called factors in this termonology. Color of our eyes, or hair are these factors
+standing&lt;-c(&quot;junior&quot;,&quot;freshmen&quot;,&quot;junior&quot;,&quot;Sophmore&quot;,&quot;Senior&quot;)
+# class(standing) Allows you to check what variable is made up of... in this case characters
+#Store the standing back into itself as this new factor version
+standing&lt;-factor(standing,levels=c(&quot;freshmen&quot;,&quot;sophmores&quot;,&quot;junior&quot;,&quot;senior&quot;))
+#You must order the table how YOU want it to be done^</code></pre>

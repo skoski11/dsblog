@@ -1,0 +1,35 @@
+---
+title: Time Series
+author: Steven Koski
+date: '2017-10-03'
+slug: time-series
+categories:
+  - R
+tags:
+  - R Markdown
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+library(Lahman)
+library(sqldf)
+library(ggplot2)
+```
+
+#This is a scatterplot that has two columns of numerical data and one 
+#represents time wile the oher reperesents different points of data
+```{r}
+query<-"SELECT yearID,HR
+FROM Batting 
+WHERE playerID='ruthba01'"
+
+result<-sqldf(query)
+
+ggplot()+
+  geom_point(data=result,aes(x=yearID,y=HR))+
+  geom_line(data=result,aes(x=yearID,y=HR))+
+  ggtitle("Frequency of high-magnitude earthquakes per year")+
+  xlab("Year")+
+  ylab("Ammount per year")
+
+```
+

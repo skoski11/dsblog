@@ -1,0 +1,32 @@
+---
+title: Time Series
+author: Steven Koski
+date: '2017-10-03'
+slug: time-series
+categories:
+  - R
+tags:
+  - R Markdown
+---
+
+
+
+<div id="this-is-a-scatterplot-that-has-two-columns-of-numerical-data-and-one" class="section level1">
+<h1>This is a scatterplot that has two columns of numerical data and one</h1>
+</div>
+<div id="represents-time-wile-the-oher-reperesents-different-points-of-data" class="section level1">
+<h1>represents time wile the oher reperesents different points of data</h1>
+<pre class="r"><code>query&lt;-&quot;SELECT yearID,HR
+FROM Batting 
+WHERE playerID=&#39;ruthba01&#39;&quot;
+
+result&lt;-sqldf(query)
+
+ggplot()+
+  geom_point(data=result,aes(x=yearID,y=HR))+
+  geom_line(data=result,aes(x=yearID,y=HR))+
+  ggtitle(&quot;Frequency of high-magnitude earthquakes per year&quot;)+
+  xlab(&quot;Year&quot;)+
+  ylab(&quot;Ammount per year&quot;)</code></pre>
+<p><img src="/post/2017-10-03-time-series_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+</div>

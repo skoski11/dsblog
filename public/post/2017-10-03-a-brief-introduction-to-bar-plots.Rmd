@@ -1,0 +1,29 @@
+---
+title: A Brief Introduction to Bar Plots
+author: Steven Koski
+date: '2017-10-03'
+slug: a-brief-introduction-to-bar-plots
+categories:
+  - R
+tags:
+  - R Markdown
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+library(Lahman)
+library(sqldf)
+library(ggplot2)
+```
+
+
+```{r}
+#Hair color is an atrribute with different levels for each of the hair colors.
+#All of these are called factors in this termonology. Color of our eyes, or hair are these factors
+standing<-c("junior","freshmen","junior","Sophmore","Senior")
+# class(standing) Allows you to check what variable is made up of... in this case characters
+#Store the standing back into itself as this new factor version
+standing<-factor(standing,levels=c("freshmen","sophmores","junior","senior"))
+#You must order the table how YOU want it to be done^
+```
+
+

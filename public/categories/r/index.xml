@@ -7,26 +7,55 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
-    <lastBuildDate>Mon, 02 Oct 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Oct 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>9.29.2017 Class Notes</title>
-      <link>/class-notes/9-29-2017-class-notes/</link>
+      <title>A Brief Introduction to Bar Plots</title>
+      <link>/post/a-brief-introduction-to-bar-plots/</link>
+      <pubDate>Tue, 03 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/a-brief-introduction-to-bar-plots/</guid>
+      <description>#Hair color is an atrribute with different levels for each of the hair colors.#All of these are called factors in this termonology. Color of our eyes, or hair are these factorsstanding&amp;lt;-c(&amp;quot;junior&amp;quot;,&amp;quot;freshmen&amp;quot;,&amp;quot;junior&amp;quot;,&amp;quot;Sophmore&amp;quot;,&amp;quot;Senior&amp;quot;)# class(standing) Allows you to check what variable is made up of... in this case characters#Store the standing back into itself as this new factor versionstanding&amp;lt;-factor(standing,levels=c(&amp;quot;freshmen&amp;quot;,&amp;quot;sophmores&amp;quot;,&amp;quot;junior&amp;quot;,&amp;quot;senior&amp;quot;))#You must order the table how YOU want it to be done^</description>
+    </item>
+    
+    <item>
+      <title>An Introduction to Histograms</title>
+      <link>/post/an-introduction-to-histograms/</link>
+      <pubDate>Tue, 03 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/an-introduction-to-histograms/</guid>
+      <description>This next chunk of code will show the basics of creating a Simple Bar graph in Rstudio to show data in a different possible way.
+query&amp;lt;-&amp;quot;SELECT weight FROM Master&amp;quot;#Good example of storing all the data into a variable that you#Can use elsewhere in your coderesult&amp;lt;-sqldf(query)#Issue with all clors default making it this bright pinkggplot()+geom_histogram(data=result,aes(x=weight),color=&amp;quot;blue&amp;quot;,fill=&amp;quot;white&amp;quot;,bins=50)+ggtitle(&amp;quot;Body-Weight of the fat baseball players&amp;quot;)## Warning: Removed 854 rows containing non-finite values (stat_bin).</description>
+    </item>
+    
+    <item>
+      <title>Time Series</title>
+      <link>/post/time-series/</link>
+      <pubDate>Tue, 03 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/time-series/</guid>
+      <description>This is a scatterplot that has two columns of numerical data and onerepresents time wile the oher reperesents different points of dataquery&amp;lt;-&amp;quot;SELECT yearID,HRFROM Batting WHERE playerID=&amp;#39;ruthba01&amp;#39;&amp;quot;result&amp;lt;-sqldf(query)ggplot()+geom_point(data=result,aes(x=yearID,y=HR))+geom_line(data=result,aes(x=yearID,y=HR))+ggtitle(&amp;quot;Frequency of high-magnitude earthquakes per year&amp;quot;)+xlab(&amp;quot;Year&amp;quot;)+ylab(&amp;quot;Ammount per year&amp;quot;)</description>
+    </item>
+    
+    <item>
+      <title>9.29.2017 Scatterplots</title>
+      <link>/post/9-29-2017-scatterplots/</link>
       <pubDate>Mon, 02 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/class-notes/9-29-2017-class-notes/</guid>
-      <description>library(Lahman)library(sqldf)## Loading required package: gsubfn## Loading required package: proto## Loading required package: RSQLitelibrary(ggplot2)print(&amp;quot;This next code is an example of a scatterplot we learned in class. It gathers all the data and plots thm as dots on a graph to make it easier to visualize the data. We also draw lines between each of the data points to make it easier to visualize how the points are ordered.</description>
+      <guid>/post/9-29-2017-scatterplots/</guid>
+      <description>This next code is an example of a scatterplot we learned in class. It gathers all the data and plots thm as dots on a graph to make it easier to visualize the data. We also draw lines between each of the data points to make it easier to visualize how the points are ordered.
+#This is a scatterplot that has two columns of numerical data and one #represents time wile the other reperesents different points of dataquery&amp;lt;-&amp;quot;SELECT yearID,HRFROM Batting WHERE playerID=&amp;#39;ruthba01&amp;#39;&amp;quot;result&amp;lt;-sqldf(query)ggplot()+geom_point(data=result,aes(x=yearID,y=HR))+geom_line(data=result,aes(x=yearID,y=HR))+ggtitle(&amp;quot;Home Runs Per Year for Babe Ruth&amp;quot;)+xlab(&amp;quot;Year&amp;quot;)+ylab(&amp;quot;Home Runs&amp;quot;)</description>
     </item>
     
     <item>
       <title>Hello R Markdown</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
+      <link>/class-notes/2015-07-23-r-rmarkdown/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
+      <guid>/class-notes/2015-07-23-r-rmarkdown/</guid>
       <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
 You can embed an R code chunk like this:
 summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>

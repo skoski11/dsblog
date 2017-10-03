@@ -1,0 +1,25 @@
+---
+title: An Introduction to Histograms
+author: Steven Koski
+date: '2017-10-03'
+slug: an-introduction-to-histograms
+categories:
+  - R
+tags:
+  - R Markdown
+---
+
+
+
+<p>This next chunk of code will show the basics of creating a Simple Bar graph in Rstudio to show data in a different possible way.</p>
+<pre class="r"><code>query&lt;-&quot;SELECT weight 
+FROM Master&quot;
+#Good example of storing all the data into a variable that you
+#Can use elsewhere in your code
+result&lt;-sqldf(query)
+#Issue with all clors default making it this bright pink
+ggplot()+
+  geom_histogram(data=result,aes(x=weight),color=&quot;blue&quot;,fill=&quot;white&quot;,bins=50)+
+  ggtitle(&quot;Body-Weight of the fat baseball players&quot;)
+## Warning: Removed 854 rows containing non-finite values (stat_bin).</code></pre>
+<p><img src="/post/2017-10-03-an-introduction-to-histograms_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>

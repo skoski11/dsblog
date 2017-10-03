@@ -1,0 +1,32 @@
+---
+title: An Introduction to Histograms
+author: Steven Koski
+date: '2017-10-03'
+slug: an-introduction-to-histograms
+categories:
+  - R
+tags:
+  - R Markdown
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+library(Lahman)
+library(sqldf)
+library(ggplot2)
+```
+
+This next chunk of code will show the basics of creating a Simple Bar
+graph in Rstudio to show data in a different possible way.
+```{r}
+query<-"SELECT weight 
+FROM Master"
+#Good example of storing all the data into a variable that you
+#Can use elsewhere in your code
+result<-sqldf(query)
+#Issue with all clors default making it this bright pink
+ggplot()+
+  geom_histogram(data=result,aes(x=weight),color="blue",fill="white",bins=50)+
+  ggtitle("Body-Weight of the fat baseball players")
+
+```
+

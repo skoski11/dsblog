@@ -1,0 +1,31 @@
+---
+title: 9.29.2017 Scatterplots
+author: Steven Koski
+date: '2017-10-02'
+slug: 9-29-2017-Scatterplots
+categories:
+  - R
+tags:
+  - R Markdown
+
+---
+
+
+
+<p>This next code is an example of a scatterplot we learned in class. It gathers all the data and plots thm as dots on a graph to make it easier to visualize the data. We also draw lines between each of the data points to make it easier to visualize how the points are ordered.</p>
+<pre class="r"><code>
+#This is a scatterplot that has two columns of numerical data and one 
+#represents time wile the other reperesents different points of data
+query&lt;-&quot;SELECT yearID,HR
+FROM Batting 
+WHERE playerID=&#39;ruthba01&#39;&quot;
+
+result&lt;-sqldf(query)
+
+ggplot()+
+  geom_point(data=result,aes(x=yearID,y=HR))+
+  geom_line(data=result,aes(x=yearID,y=HR))+
+  ggtitle(&quot;Home Runs Per Year for Babe Ruth&quot;)+
+  xlab(&quot;Year&quot;)+
+  ylab(&quot;Home Runs&quot;)</code></pre>
+<p><img src="/post/Scatterplot_Post_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
