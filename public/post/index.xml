@@ -32,6 +32,16 @@ query&amp;lt;-&amp;quot;SELECT weight FROM Master&amp;quot;#Good example of sto
     </item>
     
     <item>
+      <title>TEST_TRAVEL</title>
+      <link>/traveling/</link>
+      <pubDate>Tue, 03 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/traveling/</guid>
+      <description>Lorem Ipsum
+ipsum lorem</description>
+    </item>
+    
+    <item>
       <title>Time Series</title>
       <link>/post/time-series/</link>
       <pubDate>Tue, 03 Oct 2017 00:00:00 +0000</pubDate>

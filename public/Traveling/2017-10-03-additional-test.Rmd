@@ -1,0 +1,12 @@
+---
+title: ADDITIONAL_TEST
+author: BPK
+date: '2017-10-03'
+slug: additional-test
+categories:
+  - bullshit
+tags:
+  - black angus
+---
+
+A bull can be used for breeding, or castrated to become a steer

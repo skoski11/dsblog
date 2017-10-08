@@ -22,6 +22,15 @@
     </item>
     
     <item>
+      <title>ADDITIONAL_TEST</title>
+      <link>/traveling/additional-test/</link>
+      <pubDate>Tue, 03 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/traveling/additional-test/</guid>
+      <description>A bull can be used for breeding, or castrated to become a steer</description>
+    </item>
+    
+    <item>
       <title>An Introduction to Histograms</title>
       <link>/post/an-introduction-to-histograms/</link>
       <pubDate>Tue, 03 Oct 2017 00:00:00 +0000</pubDate>
@@ -29,6 +38,26 @@
       <guid>/post/an-introduction-to-histograms/</guid>
       <description>This next chunk of code will show the basics of creating a Simple Bar graph in Rstudio to show data in a different possible way.
 query&amp;lt;-&amp;quot;SELECT weight FROM Master&amp;quot;#Good example of storing all the data into a variable that you#Can use elsewhere in your coderesult&amp;lt;-sqldf(query)#Issue with all clors default making it this bright pinkggplot()+geom_histogram(data=result,aes(x=weight),color=&amp;quot;blue&amp;quot;,fill=&amp;quot;white&amp;quot;,bins=50)+ggtitle(&amp;quot;Body-Weight of the fat baseball players&amp;quot;)## Warning: Removed 854 rows containing non-finite values (stat_bin).</description>
+    </item>
+    
+    <item>
+      <title>TEST</title>
+      <link>/traveling/test/</link>
+      <pubDate>Tue, 03 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/traveling/test/</guid>
+      <description>lorem ipsum
+You have traveled from TRAVEL_MAIN</description>
+    </item>
+    
+    <item>
+      <title>TEST_TRAVEL</title>
+      <link>/traveling/</link>
+      <pubDate>Tue, 03 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/traveling/</guid>
+      <description>Lorem Ipsum
+ipsum lorem</description>
     </item>
     
     <item>

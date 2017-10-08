@@ -1,0 +1,14 @@
+---
+title: TEST
+author: BPK
+date: '2017-10-03'
+slug: test
+categories:
+  - bullshit
+tags: []
+---
+
+lorem ipsum
+
+
+You have traveled from TRAVEL_MAIN
