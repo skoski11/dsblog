@@ -15,21 +15,17 @@ library(sqldf)
 library(ggplot2)
 ```
 
-#This is a scatterplot that has two columns of numerical data and one 
-#represents time wile the oher reperesents different points of data
+#This is a Time Series that follows Babe Ruth's homeruns over the years
 ```{r}
-query<-"SELECT yearID,HR
-FROM Batting 
-WHERE playerID='ruthba01'"
+query<-"Select yearID, HR From Batting
+where playerID='ruthba01'"
 
-result<-sqldf(query)
+result1<-sqldf(query)
 
 ggplot()+
-  geom_point(data=result,aes(x=yearID,y=HR))+
-  geom_line(data=result,aes(x=yearID,y=HR))+
-  ggtitle("Frequency of high-magnitude earthquakes per year")+
-  xlab("Year")+
-  ylab("Ammount per year")
+  geom_point(data=result1, aes(x=yearID, y=HR), size=2.5)+
+  geom_line(data=result1, aes(x=yearID, y=HR))+
+  ggtitle("Babe Ruth's Homeruns Throughout his Career")
 
 ```
 

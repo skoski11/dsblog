@@ -1,13 +1,10 @@
 ---
-title: 9.29.2017 Scatterplots
-author: Steven Koski
+title: "9.29.2017 Scatterplots"
+author: "Steven Koski"
 date: '2017-10-02'
 slug: 9-29-2017-Scatterplots
-categories:
-  - R
-tags:
-  - R Markdown
-
+tags: R Markdown
+categories: R
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(collapse = TRUE)
@@ -22,17 +19,16 @@ This next code is an example of a scatterplot we learned in class. It gathers al
 
 #This is a scatterplot that has two columns of numerical data and one 
 #represents time wile the other reperesents different points of data
-query<-"SELECT yearID,HR
-FROM Batting 
-WHERE playerID='ruthba01'"
+query<-"Select playerID, sum(HR) AS Career_HR, sum(SO) AS Career_SO
+FROM Batting
+GROUP BY playerID
+HAVING sum(hr)>=400"
 
 result<-sqldf(query)
 
 ggplot()+
-  geom_point(data=result,aes(x=yearID,y=HR))+
-  geom_line(data=result,aes(x=yearID,y=HR))+
-  ggtitle("Home Runs Per Year for Babe Ruth")+
-  xlab("Year")+
-  ylab("Home Runs")
+  geom_point(data=result,aes(x=Career_SO,y=Career_HR), size=3)+
+ggtitle("Career Strikeout VS Homeruns for Great Hitters")+
+xlab("Career Strikeouts")+ ylab("Career Homeruns")
 ```
 
