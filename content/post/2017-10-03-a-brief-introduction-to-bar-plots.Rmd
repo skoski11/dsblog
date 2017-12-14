@@ -17,13 +17,19 @@ library(ggplot2)
 
 
 ```{r}
-#Hair color is an atrribute with different levels for each of the hair colors.
-#All of these are called factors in this termonology. Color of our eyes, or hair are these factors
-standing<-c("junior","freshmen","junior","Sophmore","Senior")
-# class(standing) Allows you to check what variable is made up of... in this case characters
-#Store the standing back into itself as this new factor version
-standing<-factor(standing,levels=c("freshmen","sophmores","junior","senior"))
-#You must order the table how YOU want it to be done^
+query<-"Select HR, name from Teams
+where yearID=1980
+ORDER BY HR"
+result<-sqldf(query)
+
+result$name<-factor(result$name, levels=result$name)
+
+ggplot()+
+  geom_bar(data=result, aes(x=name, y=HR),stat = 'identity', color="white", fill="orange")+
+  coord_flip()+
+  xlab("Franchise Name")+
+  ylab("Homerun Total")+
+  ggtitle("Total Homeruns per Team for the 1980 Year")
 ```
 
 
